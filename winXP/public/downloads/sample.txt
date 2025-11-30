@@ -1,0 +1,19 @@
+Welcome to Windows XP Desktop!
+
+This is a sample text file that demonstrates the dynamic file loading feature.
+
+You can:
+- View this file by double-clicking the desktop icon
+- Edit the content directly in Notepad
+- Add more files to the downloads folder
+
+The file server backend automatically detects new files and displays them as desktop icons.
+
+Files are organized by type:
+- .txt, .md, .log files open in Notepad
+- .pdf files open in PDF Viewer  
+- .jpg, .png, .gif images open in Image Viewer
+
+Enjoy exploring the Windows XP experience!
+
+abcd jvjh
