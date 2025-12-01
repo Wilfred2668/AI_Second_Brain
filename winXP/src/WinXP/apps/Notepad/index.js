@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import API_URL from '../../../config';
 
 import { WindowDropDowns } from 'components';
 import dropDownData from './dropDownData';
@@ -16,7 +17,7 @@ export default function Notepad({ onClose, filePath, fileName }) {
   useEffect(() => {
     if (filePath && fileName) {
       setLoading(true);
-      fetch(`http://localhost:8001/api/download/${fileName}`)
+      fetch(`${API_URL}/api/download/${fileName}`)
         .then(response => response.text())
         .then(text => {
           setDocText(text);
