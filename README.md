@@ -5,10 +5,13 @@ A nostalgic Windows XP-themed AI knowledge management system that lets you chat 
 ## Features
 
 - **Windows XP UI** - Authentic retro interface with draggable windows, start menu, and classic design
-- **AI Chat** - Query your knowledge base using Google Gemini 2.0 Flash
-- **Document Processing** - Upload and process PDF, TXT, and image files (OCR)
-- **Vector Search** - Powered by Qdrant for semantic document retrieval
-- **Cloud Storage** - Supabase for document management and metadata
+- **AI Chat with Memory** - Remembers previous conversations and maintains context across chat sessions
+- **Intelligent Document Retrieval** - Automatically fetches relevant files from your knowledge base based on chat topics
+- **Document Processing** - Upload and process PDF, TXT, and image files with OCR support
+- **Vector Search** - Semantic search powered by Qdrant for accurate context retrieval
+- **Chat Session Management** - All conversations are saved and organized for easy reference
+- **Smart File Tagging** - Automatically tags chats with related documents from your system
+- **Cloud Storage** - Supabase for secure document management and metadata
 
 ## Tech Stack
 
@@ -93,27 +96,29 @@ npm start
 ## Screenshots
 
 ![Landing Page](landing%20page.png)
-*Classic Windows XP desktop with authentic start menu and desktop icons*
+*Classic Windows XP desktop interface with iconic start menu, taskbar, and desktop shortcuts*
+
+![Multiple Windows](tabs%20open.png)
+*Fully functional multi-window environment - drag, resize, minimize, and maximize windows just like the original XP*
 
 ![File Upload](upload.png)
-*My Computer window for uploading documents (PDF, TXT, images)*
+*Simple file upload interface on the home page - supports PDF documents, text files, and images for OCR processing*
 
 ![Chat Sessions](chat_sessions.png)
-*Google Chrome browser interface for AI-powered chat interactions*
+*Click Clippy to start chatting - all conversation history is preserved and easily accessible for reference*
 
-![Multiple Tabs](tabs%20open.png)
-*Multi-window experience with draggable, resizable windows*
-
-![File Tags](tags_file.png)
-*Document management with tagging and organization features*
+![Smart File Tagging](tags_file.png)
+*AI automatically identifies and tags relevant files when your chat relates to documents in your knowledge base*
 
 ## Usage
 
-1. Click **My Computer** to upload documents (PDF, TXT, PNG, JPG)
-2. Documents are processed and stored in your knowledge base
-3. Use **Google Chrome** to chat with your AI assistant
-4. Ask questions about your uploaded documents
-5. Get AI-powered responses with context from your files
+1. **Upload Documents** - Use the upload interface on the home page to add PDF, TXT, PNG, or JPG files
+2. **Automatic Processing** - Documents are processed, embedded, and stored in your vector database
+3. **Start Chatting** - Click on Clippy to open the chat interface
+4. **Contextual Conversations** - The AI remembers previous chats and maintains conversation context
+5. **Smart Retrieval** - Ask questions about any topic - if relevant files exist in your system, they're automatically fetched
+6. **Tagged References** - Conversations are automatically tagged with related documents for easy tracking
+7. **Session Management** - All chat sessions are saved and can be resumed anytime
 
 
 ## Author
