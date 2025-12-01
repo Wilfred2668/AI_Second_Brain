@@ -28,7 +28,11 @@ export const fileService = {
    */
   async getFiles() {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/files`);
+      const response = await fetch(`${API_BASE_URL}/api/files`, {
+        headers: {
+          'ngrok-skip-browser-warning': 'true'
+        }
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

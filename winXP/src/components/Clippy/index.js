@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import clippyIcon from 'assets/windowsIcons/clippy.png';
-import API_URL from '../../config';
+import API_URL, { getHeaders } from '../../config';
 
 const ClippyAssistant = ({ onClose }) => {
   const [messages, setMessages] = useState([]);
@@ -21,7 +21,7 @@ const ClippyAssistant = ({ onClose }) => {
     try {
       const response = await fetch(`${API_URL}/api/sessions/new`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getHeaders(),
         body: JSON.stringify({ title: 'New Chat' })
       });
       const data = await response.json();
@@ -37,7 +37,9 @@ const ClippyAssistant = ({ onClose }) => {
 
   const loadSessions = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/sessions`);
+      const response = await fetch(`${API_URL}/api/sessions`, {
+        headers: getHeaders()
+      });
       const data = await response.json();
       if (data.success) {
         setSessions(data.sessions);
@@ -49,7 +51,9 @@ const ClippyAssistant = ({ onClose }) => {
 
   const loadSession = async (sessionId) => {
     try {
-      const response = await fetch(`${API_URL}/api/sessions/${sessionId}`);
+      const response = await fetch(`${API_URL}/api/sessions/${sessionId}`, {
+        headers: getHeaders()
+      });
       const data = await response.json();
       if (data.success) {
         setCurrentSessionId(sessionId);
@@ -67,7 +71,10 @@ const ClippyAssistant = ({ onClose }) => {
   const deleteSession = async (sessionId, e) => {
     e.stopPropagation();
     try {
-      await fetch(`${API_URL}/api/sessions/${sessionId}`, { method: 'DELETE' });
+      await fetch(`${API_URL}/api/sessions/${sessionId}`, { 
+        method: 'DELETE',
+        headers: getHeaders()
+      });
       if (sessionId === currentSessionId) {
         createNewSession();
       }
@@ -92,7 +99,7 @@ const ClippyAssistant = ({ onClose }) => {
     try {
       const response = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: getHeaders(),
         body: JSON.stringify({ 
           message: userMessage,
           session_id: currentSessionId 
