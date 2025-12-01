@@ -4,7 +4,7 @@ qdrant-client==1.11.3
 sentence-transformers==2.7.0
 PyPDF2==3.0.1
 pytesseract==0.3.10
-Pillow==10.1.0
+Pillow==11.0.0
 python-dotenv==1.0.0
 google-generativeai==0.3.2
 grpcio==1.60.0
