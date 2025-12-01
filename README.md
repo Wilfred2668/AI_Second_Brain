@@ -2,6 +2,8 @@
 
 A nostalgic Windows XP-themed AI knowledge management system that lets you chat with your documents using RAG (Retrieval Augmented Generation).
 
+**Live Demo:** [https://ai-second-brain-551r.vercel.app](https://ai-second-brain-551r.vercel.app)
+
 ## Features
 
 - **Windows XP UI** - Authentic retro interface with draggable windows, start menu, and classic design
@@ -81,25 +83,21 @@ npm start
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
-## Live Demo
-
-🚀 **[Try it here: https://ai-second-brain-551r.vercel.app](https://ai-second-brain-551r.vercel.app)**
-
 ## Screenshots
 
-![Landing Page](landing%20page.png)
+![Landing Page](images/landing%20page.png)
 *Classic Windows XP desktop interface with iconic start menu, taskbar, and desktop shortcuts*
 
-![Multiple Windows](tabs%20open.png)
+![Multiple Windows](images/tabs%20open.png)
 *Fully functional multi-window environment - drag, resize, minimize, and maximize windows just like the original XP*
 
-![File Upload](upload.png)
+![File Upload](images/upload.png)
 *Simple file upload interface on the home page - supports PDF documents, text files, and images for OCR processing*
 
-![Chat Sessions](chat_sessions.png)
+![Chat Sessions](images/chat_sessions.png)
 *Click Clippy to start chatting - all conversation history is preserved and easily accessible for reference*
 
-![Smart File Tagging](tags_file.png)
+![Smart File Tagging](images/tags_file.png)
 *AI automatically identifies and tags relevant files when your chat relates to documents in your knowledge base*
 
 ## Usage
@@ -115,4 +113,4 @@ npm start
 
 ## Author
 
-Built with ❤️ using React and Flask
+Built with love using React and Flask
