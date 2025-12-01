@@ -81,17 +81,9 @@ npm start
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
-## Deployment
+## Live Demo
 
-**Frontend (Vercel):**
-- Connected to GitHub repository
-- Auto-deploys on push to main
-- Environment variable: `REACT_APP_API_URL`
-
-**Backend (Render):**
-- Web service with automatic deploys
-- Uses `runtime.txt` for Python 3.12.3
-- Add all environment variables from .env
+🚀 **[Try it here: https://ai-second-brain-551r.vercel.app](https://ai-second-brain-551r.vercel.app)**
 
 ## Screenshots
 
