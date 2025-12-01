@@ -33,7 +33,13 @@ app = Flask(__name__)
 if os.getenv('FLASK_ENV') == 'production':
     # In production, specify your frontend URL
     frontend_url = os.getenv('FRONTEND_URL', 'https://your-frontend.vercel.app')
-    CORS(app, resources={r"/api/*": {"origins": [frontend_url]}})
+    CORS(app, resources={
+        r"/api/*": {
+            "origins": [frontend_url],
+            "allow_headers": ["Content-Type", "ngrok-skip-browser-warning"],
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+        }
+    })
 else:
     # In development, allow all origins
     CORS(app)
