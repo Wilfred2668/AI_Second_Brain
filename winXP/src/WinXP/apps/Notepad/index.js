@@ -42,7 +42,7 @@ export default function Notepad({ onClose, filePath, fileName }) {
     
     setSaving(true);
     try {
-      const response = await fetch(`http://localhost:8001/api/save/${encodeURIComponent(fileName)}`, {
+      const response = await fetch(`${API_URL}/api/save/${encodeURIComponent(fileName)}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain',

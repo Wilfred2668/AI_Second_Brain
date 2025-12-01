@@ -3,8 +3,9 @@
  */
 
 import notepadIcon from 'assets/windowsIcons/327(32x32).png';
+import API_URL from '../config';
 
-const API_BASE_URL = 'http://localhost:8001';
+const API_BASE_URL = API_URL;
 
 // Online icon sources
 const ONLINE_ICONS = {

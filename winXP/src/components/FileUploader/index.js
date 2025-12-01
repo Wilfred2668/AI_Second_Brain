@@ -83,48 +83,47 @@ const FileUploader = ({ onClose, onUploadComplete }) => {
           onDrop={handleDrop}
           onClick={() => document.getElementById('fileInput').click()}
         >
-          <DropText>
-            {selectedFile ? (
-              <>
-                <FileIcon>📄</FileIcon>
-                <FileName>{selectedFile.name}</FileName>
-                <FileSize>{(selectedFile.size / 1024).toFixed(2)} KB</FileSize>
-              </>
-            ) : (
-              <>
-                <UploadIcon>📤</UploadIcon>
-                <DropText>Drop file here or click to browse</DropText>
-                <SupportedFormats>
-                  Supports: PDF, TXT, MD, PNG, JPG, JPEG
-                </SupportedFormats>
-              </>
-            )}
-          </DropZone>
-
-          <input
-            id="fileInput"
-            type="file"
-            accept=".pdf,.txt,.md,.png,.jpg,.jpeg"
-            onChange={handleFileSelect}
-            style={{ display: 'none' }}
-          />
-
-          {message && (
-            <Message success={message.startsWith('✓')}>
-              {message}
-            </Message>
+          {selectedFile ? (
+            <>
+              <FileIcon>📄</FileIcon>
+              <FileName>{selectedFile.name}</FileName>
+              <FileSize>{(selectedFile.size / 1024).toFixed(2)} KB</FileSize>
+            </>
+          ) : (
+            <>
+              <UploadIcon>📤</UploadIcon>
+              <DropText>Drop file here or click to browse</DropText>
+              <SupportedFormats>
+                Supports: PDF, TXT, MD, PNG, JPG, JPEG
+              </SupportedFormats>
+            </>
           )}
+        </DropZone>
 
-          <ButtonGroup>
-            <UploadButton 
-              onClick={handleUpload} 
-              disabled={!selectedFile || uploading}
-            >
-              {uploading ? 'Uploading...' : 'Upload & Process'}
-            </UploadButton>
-            <CancelButton onClick={onClose}>Cancel</CancelButton>
-          </ButtonGroup>
-        </Content>
+        <input
+          id="fileInput"
+          type="file"
+          accept=".pdf,.txt,.md,.png,.jpg,.jpeg"
+          onChange={handleFileSelect}
+          style={{ display: 'none' }}
+        />
+
+        {message && (
+          <Message success={message.startsWith('✓')}>
+            {message}
+          </Message>
+        )}
+
+        <ButtonGroup>
+          <UploadButton 
+            onClick={handleUpload} 
+            disabled={!selectedFile || uploading}
+          >
+            {uploading ? 'Uploading...' : 'Upload & Process'}
+          </UploadButton>
+          <CancelButton onClick={onClose}>Cancel</CancelButton>
+        </ButtonGroup>
+      </Content>
     </Window>
   );
 };

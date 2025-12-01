@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { WindowDropDowns } from 'components';
+import API_URL from '../../../config';
 
 const dropDownData = [
   {
@@ -53,7 +54,7 @@ function PDFViewer({ onClose, filePath, fileName }) {
         <div className="pdf__viewer">
           {fileName ? (
             <iframe
-              src={`http://localhost:8001/api/download/${encodeURIComponent(fileName)}`}
+              src={`${API_URL}/api/download/${encodeURIComponent(fileName)}`}
               width="100%"
               height="100%"
               title={`PDF Viewer - ${fileName}`}
